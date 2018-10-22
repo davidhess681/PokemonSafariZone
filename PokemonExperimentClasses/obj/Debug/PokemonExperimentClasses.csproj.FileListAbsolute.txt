@@ -1,0 +1,7 @@
+C:\Users\David\source\repos\PokemonExperimentClasses\PokemonExperimentClasses\bin\Debug\PokemonExperimentClasses.exe.config
+C:\Users\David\source\repos\PokemonExperimentClasses\PokemonExperimentClasses\bin\Debug\PokemonExperimentClasses.exe
+C:\Users\David\source\repos\PokemonExperimentClasses\PokemonExperimentClasses\bin\Debug\PokemonExperimentClasses.pdb
+C:\Users\David\source\repos\PokemonExperimentClasses\PokemonExperimentClasses\obj\Debug\PokemonExperimentClasses.csprojAssemblyReference.cache
+C:\Users\David\source\repos\PokemonExperimentClasses\PokemonExperimentClasses\obj\Debug\PokemonExperimentClasses.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\PokemonExperimentClasses\PokemonExperimentClasses\obj\Debug\PokemonExperimentClasses.exe
+C:\Users\David\source\repos\PokemonExperimentClasses\PokemonExperimentClasses\obj\Debug\PokemonExperimentClasses.pdb
