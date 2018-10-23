@@ -8,35 +8,52 @@ namespace PokemonExperimentClasses
 {
     class Mon
     {
+
+        // constructor method
         public Mon(Random r)
         {
-            
+            // there's probably an easier way to do this with subclasses
+
+            // roll between 1 and 100 and set it to an int
             int rarity = r.Next(1, 100); 
+
+            // set properties of the pokemon based on "rarity"
+
+            // 60% chance of common
             if (rarity <=60)
             {
+                // roll again to pick an index number to pull from
                 Name = Common()[r.Next(0, 48)];
+
+                // catch rate is constant between rarities
                 CatchRate = 80;
             }
+            // 25% chance of uncommon
             if (rarity >60 && rarity <= 85)
             {
                 Name = Uncommon()[r.Next(0, 53)];
                 CatchRate = 40;
             }
+            // 13% chance of rare
             if (rarity >85 && rarity <= 98)
             {
                 Name = Rare()[r.Next(0, 38)];
                 CatchRate = 15;
             }
+            // 2% chance of very rare
             if (rarity > 98)
             {
                 Name = VRare()[r.Next(0, 8)];
                 CatchRate = 5;
             }
+
+            // flee rate is always 15
             FleeRate = 15;
         }
 
         public void GenerateEncounter()
         {
+            // Inform user which pokemon was chosen
             Console.WriteLine("\nA wild {0} appeared!", Name);
             Console.WriteLine("");
             
@@ -44,19 +61,24 @@ namespace PokemonExperimentClasses
 
         public bool ThrowBall()
         {
+            // I probably don't need to be creating so many Randoms but I'm paranoid >:[
             Random ball = new Random();
+
+            // if random number is less than catch rate, return true (pokemon is caught)
             if (ball.Next(1,100) <= CatchRate)
             {
                 return true;
             }
             else
             {
+                // else return false (pokemon is not caught)
                 Console.WriteLine("\n{0} broke free!", Name);
                 return false;
             }
         }
         public void FeedBerry()
         {
+            // increase current pokemon's catch rate by 20
             CatchRate = CatchRate + 20;
             Console.WriteLine("\n{0} is eating the berry!", Name);
         }
@@ -64,11 +86,14 @@ namespace PokemonExperimentClasses
         {
             Console.WriteLine("\nGot away safely!");
         }
-       
+        
+        // properties we set in the constructor method
         public string Name { get; set; }
         public int CatchRate { get; set; }
         public int FleeRate { get; set; }
         
+
+        // arrays storing the pokemon's names
         private string[] Common()
         {
             string[] list = new string[49];
